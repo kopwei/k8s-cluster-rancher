@@ -1,0 +1,4 @@
+*.tfstate
+*.tfstate.backup
+.terraform
+kube_config_cluster.yml

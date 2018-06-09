@@ -1,15 +1,15 @@
 ---
 nodes:
-  - address: 10.20.30.223
+  - address: 10.20.30.12
     user: rancher
     role: [controlplane, etcd]
-  - address: 10.20.30.179
+  - address: 10.20.30.216
     user: rancher
     role: [worker, etcd]
-  - address: 10.20.30.25
+  - address: 10.20.30.11
     user: rancher
     role: [worker, etcd]
-  - address: 10.20.30.195
+  - address: 10.20.30.152
     user: rancher
     role: [worker]
 
@@ -20,15 +20,15 @@ services:
   etcd:
     image: quay.io/coreos/etcd:latest
   kube-api:
-    image: rancher/k8s:v1.10.0-rancher1-1
+    image: rancher/k8s:v1.10.3-rancher1-1
   kube-controller:
-    image: rancher/k8s:v1.10.0-rancher1-1
+    image: rancher/k8s:v1.10.3-rancher1-1
   scheduler:
-    image: rancher/k8s:v1.10.0-rancher1-1
+    image: rancher/k8s:v1.10.3-rancher1-1
   kubelet:
-    image: rancher/k8s:v1.10.0-rancher1-1
+    image: rancher/k8s:v1.10.3-rancher1-1
   kubeproxy:
-    image: rancher/k8s:v1.10.0-rancher1-1
+    image: rancher/k8s:v1.10.3-rancher1-1
 
 addons: |-
   ---
@@ -99,7 +99,7 @@ addons: |-
           app: cattle
       spec:
         containers:
-        - image: rancher/server:master
+        - image: rancher/rancher:master
           imagePullPolicy: Always
           name: cattle-server
           ports:
