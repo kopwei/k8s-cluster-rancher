@@ -1,15 +1,15 @@
 ---
 nodes:
-  - address: 10.20.30.12
+  - address: 10.20.30.10
     user: rancher
     role: [controlplane, etcd]
-  - address: 10.20.30.216
-    user: rancher
-    role: [worker, etcd]
   - address: 10.20.30.11
     user: rancher
     role: [worker, etcd]
-  - address: 10.20.30.152
+  - address: 10.20.30.12
+    user: rancher
+    role: [worker, etcd]
+  - address: 10.20.30.13
     user: rancher
     role: [worker]
 
