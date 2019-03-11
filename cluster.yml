@@ -20,15 +20,15 @@ services:
   etcd:
     image: quay.io/coreos/etcd:latest
   kube-api:
-    image: rancher/k8s:v1.10.3-rancher1-1
+    image: rancher/k8s:v1.12.6-rancher1-1
   kube-controller:
-    image: rancher/k8s:v1.10.3-rancher1-1
+    image: rancher/k8s:v1.12.6-rancher1-1
   scheduler:
-    image: rancher/k8s:v1.10.3-rancher1-1
+    image: rancher/k8s:v1.12.6-rancher1-1
   kubelet:
-    image: rancher/k8s:v1.10.3-rancher1-1
+    image: rancher/k8s:v1.12.6-rancher1-1
   kubeproxy:
-    image: rancher/k8s:v1.10.3-rancher1-1
+    image: rancher/k8s:v1.12.6-rancher1-1
 
 addons: |-
   ---

@@ -7,7 +7,7 @@ provider "libvirt" {
 resource "libvirt_volume" "rancher-qcow2" {
   name   = "rancher${count.index}.qcow2"
   pool   = "default"
-  source = "https://releases.rancher.com/os/v1.4.0/rancheros-openstack.img"
+  source = "https://releases.rancher.com/os/v1.5.1/rancheros-openstack.img"
   format = "qcow2"
   count  = 4
 }
@@ -28,7 +28,7 @@ resource "libvirt_cloudinit" "rancherinit" {
   user_data = <<USER_DATA
 rancher:
   docker:
-    engine: docker-17.03.2-ce
+    engine: docker-18.06.1-ce
   network:
     dns:
       nameservers:
